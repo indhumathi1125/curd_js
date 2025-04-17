@@ -14,8 +14,15 @@ function displayItems(){
 // Add this number of element
 function addNumber(){
     const inputValue=Number(document.getElementById("input").value)
-    listNumber.push(inputValue)
-    displayItems()
+    if(listNumber.includes(inputValue)){
+        alert("Number is exists")
+    }else{
+
+        listNumber.push(inputValue)
+        alert("Number are successfully")
+        displayItems()
+    }
+    
 }
 // Color change And Iuput of show this element
 function Click(indexPosition){
